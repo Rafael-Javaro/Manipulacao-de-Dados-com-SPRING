@@ -27,4 +27,9 @@ public class AccelerationService implements AccelerationServiceInterface {
     public Acceleration save(Acceleration object) {
         return this.repository.save(object);
     }
+
+    @Override
+    public  Optional<Acceleration> findAccelerationByName(String name) { return this.repository.findByCandidatesIdAccelerationName(name); }
+    // public List<Acceleration> findAccelerationByName(String name) { return this.repository.findByAccelerationName(name); }
+
 }
